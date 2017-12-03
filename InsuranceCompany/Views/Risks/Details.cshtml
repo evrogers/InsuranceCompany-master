@@ -1,0 +1,42 @@
+﻿@model InsuranceCompany.Models.Risks
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Risks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RiskName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RiskDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AverageProbability)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AverageProbability)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

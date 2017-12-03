@@ -1,0 +1,78 @@
+﻿@model InsuranceCompany.Models.Policys
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Policys</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PolicyNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PolicyNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateBegin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateBegin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Summ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Summ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMark)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndMark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndMark)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.ClientName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Staff.StaffName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type.PolicyName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
